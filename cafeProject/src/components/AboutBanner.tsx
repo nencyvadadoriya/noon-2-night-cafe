@@ -8,7 +8,6 @@ const AboutBanner = () => {
           backgroundImage: 'url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop")',
         }}
       >
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
       </div>
 
       {/* Content */}
@@ -19,9 +18,7 @@ const AboutBanner = () => {
         <p className="text-xl md:text-2xl text-amber-100 font-medium">
           Our Journey, Our Passion
         </p>
-        <div className="mt-8 flex justify-center">
-          <div className="w-24 h-1 bg-amber-500 rounded-full"></div>
-        </div>
+        
       </div>
     </div>
   );

@@ -29,9 +29,7 @@ const PageBanner: React.FC<PageBannerProps> = ({ title, subtitle, image }) => {
             {subtitle}
           </p>
         )}
-        <div className="mt-8 flex justify-center">
-          <div className="w-24 h-1 bg-orange-500 rounded-full"></div>
-        </div>
+       
       </div>
     </div>
   );
