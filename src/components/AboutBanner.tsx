@@ -18,9 +18,7 @@ const AboutBanner = () => {
         <p className="text-xl md:text-2xl text-amber-100 font-medium">
           Our Journey, Our Passion
         </p>
-        <div className="mt-8 flex justify-center">
-          <div className="w-24 h-1 bg-amber-500 rounded-full"></div>
-        </div>
+        
       </div>
     </div>
   );
