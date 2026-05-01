@@ -15,14 +15,14 @@ function Footer() {
               Experience the perfect blend of artisanal coffee and cozy atmosphere. From morning brews to evening bites, we create moments that matter.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm">
-                <i className="fab fa-facebook-f"></i>
+              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm cursor-pointer">
+                <i className="fab fa-facebook-f cursor-pointer"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm">
-                <i className="fab fa-instagram"></i>
+              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm cursor-pointer">
+                <i className="fab fa-instagram cursor-pointer"></i>
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm">
-                <i className="fab fa-twitter"></i>
+              <a href="#" className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 hover:bg-amber-600 hover:text-white transition-all duration-300 shadow-sm cursor-pointer">
+                <i className="fab fa-twitter cursor-pointer"></i>
               </a>
             </div>
           </div>
@@ -32,26 +32,26 @@ function Footer() {
             <h4 className="text-xl font-bold text-amber-900">Explore</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <Link to="/" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"></span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <Link to="/about" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"></span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/menu" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <Link to="/menu" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"></span>
                   Our Menu
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                <Link to="/contact" className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2 group cursor-pointer">
+                  <span className="w-1.5 h-1.5 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"></span>
                   Contact
                 </Link>
               </li>
@@ -111,8 +111,8 @@ function Footer() {
               © {new Date().getFullYear()} Noon 2 Night Café. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-500">
-              <a href="#" className="hover:text-orange-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-orange-600 transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-orange-600 transition-colors cursor-pointer">Privacy Policy</a>
+              <a href="#" className="hover:text-orange-600 transition-colors cursor-pointer">Terms of Service</a>
             </div>
           </div>
         </div>

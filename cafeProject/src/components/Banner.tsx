@@ -32,7 +32,7 @@ function Banner() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen font-sans overflow-hidden bg-black">
+    <section className="relative w-full h-[100dvh] font-sans overflow-hidden bg-black">
       {/* Slides */}
       <AnimatePresence initial={false}>
         <motion.div
@@ -46,7 +46,7 @@ function Banner() {
           <img
             src={slides[currentIndex].img}
             alt={`Cafe Banner ${currentIndex + 1}`}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full object-center scale-110"
           />
           <div className="absolute inset-0 bg-black/50"></div>
 
@@ -55,11 +55,11 @@ function Banner() {
               The Night Cafe
             </span>
 
-            <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
               {slides[currentIndex].title}
             </h2>
 
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl font-light">
+            <p className="text-base md:text-xl text-gray-300 max-w-2xl font-light">
               {slides[currentIndex].desc}
             </p>
           </div>

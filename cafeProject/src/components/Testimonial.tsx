@@ -46,12 +46,12 @@ const testimonials = [
 
 function Testimonial() {
   return (
-    <section id="testimonial" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-zinc-900 mb-4 tracking-tight">What Our Customers Say</h2>
+    <section id="testimonial" className="py-12 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight">What Our Customers Say</h2>
           
-          <p className="text-zinc-500 mt-6 max-w-2xl mx-auto text-lg italic">
+          <p className="text-zinc-500 mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-lg italic px-2">
             "We take pride in serving our community with the finest coffee and delicious meals. Here's what some of our regulars have to say about their experience."
           </p>
         </div>

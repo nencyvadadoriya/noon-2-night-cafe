@@ -341,16 +341,15 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
       zIndex: 0,
       x: direction < 0 ? '100%' : '-100%',
       opacity: 0,
-      scale: 0.95
     })
   };
 
   return (
-    <section id="menu" className="pt-32 pb-24 bg-[#111]">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
-          <h4 className="text-[13px] tracking-[0.3em] text-orange-400 font-semibold mb-3 uppercase">ENJOY YOUR TIME IN OUR RESTAURANT WITH PLEASURE.</h4>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">Discover Our Menu</h2>
+    <section id="menu" className="pt-20 md:pt-32 pb-16 md:pb-24 bg-[#111]">
+      <div className="max-w-[1200px] mx-auto px-4 md:px-12">
+        <div className="text-center mb-10 md:mb-16">
+          <h4 className="text-[11px] md:text-[13px] tracking-[0.2em] md:tracking-[0.3em] text-orange-400 font-semibold mb-3 uppercase">ENJOY YOUR TIME IN OUR RESTAURANT WITH PLEASURE.</h4>
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6 font-playfair">Discover Our Menu</h2>
           <div className="flex justify-center items-center">
             <div className="w-2.5 h-2.5 bg-orange-400 rounded-full relative after:content-[''] after:absolute after:top-1/2 after:right-5 after:w-16 after:h-px after:bg-white/10 before:content-[''] before:absolute before:top-1/2 before:left-5 before:w-16 before:h-px before:bg-white/10"></div>
           </div>
@@ -358,7 +357,7 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
             <div className="mt-8">
               <Link 
                 to="/menu" 
-                className="inline-block px-8 py-3 bg-orange-400 text-white font-bold rounded-full hover:bg-orange-500 transition-colors shadow-lg shadow-orange-400/20"
+                className="inline-block px-8 py-3 bg-orange-400 text-white font-bold rounded-full hover:bg-orange-500 transition-colors shadow-lg shadow-orange-400/20 cursor-pointer"
               >
                 View Full Menu
               </Link>
@@ -368,12 +367,12 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
 
         {/* Categories */}
         {!hideCategories && (
-          <div className="flex flex-wrap justify-center gap-3 mb-16">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-16">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setFilter(cat.filter)}
-                className={`cursor-pointer px-7 py-2.5 rounded-full text-[13px] font-semibold tracking-wider transition-all duration-300 ${
+                className={`cursor-pointer px-4 md:px-7 py-2 md:py-2.5 rounded-full text-[11px] md:text-[13px] font-semibold tracking-wider transition-all duration-300 ${
                   (filter === cat.filter)
                     ? 'bg-orange-400 text-white shadow-lg shadow-orange-400/20'
                     : 'bg-[#1a1a1a] text-gray-400 hover:bg-orange-400 hover:text-white border border-white/5'
@@ -388,7 +387,7 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
         {/* Menu Items Grid */}
         <motion.div
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
         >
           <AnimatePresence mode='popLayout'>
             {displayItems.map((item) => (
@@ -399,7 +398,7 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
-                className="group bg-[#1e1e1e] overflow-hidden transition-all duration-500"
+                className="group bg-[#1e1e1e] overflow-hidden transition-all duration-500 cursor-pointer"
               >
                 <div
                   className="relative aspect-[4/5] overflow-hidden cursor-pointer"
@@ -411,16 +410,16 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-                    <div className="w-10 h-10 bg-black/40 rounded-full flex items-center justify-center border border-white/10 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                    <div className="w-10 h-10 bg-black/40 rounded-full flex items-center justify-center border border-white/10 transform scale-50 group-hover:scale-100 transition-transform duration-500 cursor-pointer">
                       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                       </svg>
                     </div>
                   </div>
                 </div>
-                <div className="p-6 text-left">
-                  <h3 className="text-[16px] font-bold mb-2 font-playfair text-white tracking-wide group-hover:text-orange-400 transition-colors duration-300">{item.name}</h3>
-                  <div className="text-orange-400 font-medium text-[18px] font-playfair italic">₹{item.price.replace('₹', '')}</div>
+                <div className="p-4 md:p-6 text-left">
+                  <h3 className="text-[14px] md:text-[16px] font-bold mb-1 md:mb-2 font-playfair text-white tracking-wide group-hover:text-orange-400 transition-colors duration-300">{item.name}</h3>
+                  <div className="text-orange-400 font-medium text-[16px] md:text-[18px] font-playfair italic">₹{item.price.replace('₹', '')}</div>
                 </div>
               </motion.div>
             ))}
@@ -437,9 +436,9 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
           {/* Prev Arrow */}
           <button
             onClick={goPrev}
-            className="absolute left-4 md:left-10 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-orange-400 text-white transition-all duration-300 cursor-pointer z-[60] group"
+            className="absolute left-2 md:left-10 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-orange-400 text-white transition-all duration-300 cursor-pointer z-[60] group"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -458,18 +457,18 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.3 }
                 }}
-                className="absolute inset-0 w-full h-full flex flex-col items-center justify-center"
+                className="absolute inset-0 w-full h-full flex flex-col items-center justify-center cursor-pointer"
               >
                 <div className="w-full flex flex-col items-center justify-center px-4 py-8">
                   <div className="relative group/img max-w-full flex justify-center">
                     <img
                       src={filteredItems[selectedIndex].image}
                       alt={filteredItems[selectedIndex].name}
-                      className="max-w-full max-h-[55vh] md:max-h-[60vh] object-contain rounded shadow-2xl shadow-black/80 ring-1 ring-white/10"
+                      className="max-w-full max-h-[55vh] md:max-h-[60vh] object-contain rounded shadow-2xl shadow-black/80 ring-1 ring-white/10 cursor-pointer"
                       onClick={(e) => e.stopPropagation()}
                     />
                   </div>
-                  <div className="mt-6 md:mt-8 text-center bg-black/40 backdrop-blur-md p-4 md:p-6 rounded-xl border border-white/5 max-w-[90%] md:max-w-lg">
+                  <div className="mt-6 md:mt-8 text-center bg-black/40 backdrop-blur-md p-4 md:p-6 rounded-xl border border-white/5 max-w-[90%] md:max-w-lg cursor-pointer">
                     <h3 className="text-white text-2xl md:text-3xl font-bold font-playfair tracking-wide leading-tight">{filteredItems[selectedIndex].name}</h3>
                     <div className="mt-2 flex items-center justify-center gap-2">
                       <div className="h-px w-8 bg-orange-400/30"></div>
@@ -485,9 +484,9 @@ const Menu: React.FC<MenuProps> = ({ limit, hideCategories }) => {
           {/* Next Arrow */}
           <button
             onClick={goNext}
-            className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 w-14 h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-orange-400 text-white transition-all duration-300 cursor-pointer z-[60] group"
+            className="absolute right-2 md:right-10 top-1/2 -translate-y-1/2 w-10 h-10 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-white/5 hover:bg-orange-400 text-white transition-all duration-300 cursor-pointer z-[60] group"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>

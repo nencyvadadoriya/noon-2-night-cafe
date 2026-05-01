@@ -28,21 +28,21 @@ const InstagramGallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+    <section className="py-12 md:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-10 md:mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            <span className="text-zinc-500 font-medium tracking-widest uppercase text-sm">Follow Us @noon2nightcafe</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span className="text-zinc-500 font-medium tracking-widest uppercase text-xs md:text-sm">Follow Us @noon2nightcafe</span>
           </div>
-          <h2 className="text-4xl font-bold text-zinc-900 mb-4 tracking-tight">Our Instagram Feed</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight">Our Instagram Feed</h2>
          
-          <p className="text-zinc-500 mt-6 max-w-2xl mx-auto text-lg italic">
+          <p className="text-zinc-500 mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-lg italic px-2">
             "Capture the moments, share the vibes. Join our community and tag us in your coffee stories!"
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
           {galleryImages.map((item) => (
             <div key={item.id} className="relative group overflow-hidden aspect-square rounded-xl cursor-pointer">
               <img 
@@ -64,12 +64,12 @@ const InstagramGallery = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-center mt-10 md:mt-12">
           <a 
             href="https://instagram.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-amber-600 text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 bg-amber-600 text-white px-8 py-3 rounded-full font-bold hover:bg-amber-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 cursor-pointer"
           >
             Visit Our Profile
           </a>
