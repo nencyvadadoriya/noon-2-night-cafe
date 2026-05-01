@@ -7,6 +7,7 @@ import TestimonialsPage from "./TestimonialsPage";
 import ContactPage from "./ContactPage";
 import CoffeeKnowledgePage from "./CoffeeKnowledgePage";
 import NotFoundPage from "./NotFoundPage";
+import CustomCursor from "./components/CustomCursor";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -22,6 +23,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />

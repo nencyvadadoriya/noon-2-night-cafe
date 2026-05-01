@@ -1,0 +1,77 @@
+:root {
+  --cursor-inner-color: #f97316; /* orange-500 matches the site theme */
+  --cursor-outer-color: rgba(249, 115, 22, 0.3);
+  --cursor-hover-color: rgba(249, 115, 22, 0.6);
+}
+
+/* Hide default cursor globally */
+html, body, a, button {
+  cursor: none !important;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--cursor-inner-color);
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--cursor-outer-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Visibility */
+.cursor-dot.visible,
+.cursor-outline.visible {
+  opacity: 1;
+}
+
+/* Hover effects */
+.cursor-dot.hover {
+  width: 12px;
+  height: 12px;
+  background-color: #ea580c; /* orange-600 */
+}
+
+.cursor-outline.hover {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(249, 115, 22, 0.1);
+  border-color: #ea580c;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+}
+
+/* Accessibility: Show default cursor if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html, body, a, button {
+    cursor: auto !important;
+  }
+  .cursor-dot, .cursor-outline {
+    display: none;
+  }
+}
+
+/* Hide on mobile/touch devices */
+@media (hover: none) and (pointer: coarse) {
+  html, body, a, button {
+    cursor: auto !important;
+  }
+  .cursor-dot, .cursor-outline {
+    display: none;
+  }
+}
