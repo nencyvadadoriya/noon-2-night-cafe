@@ -87,42 +87,44 @@ const articles = [
 function CoffeeKnowledgePage() {
   return (
     <Layout darkHeader={true}>
-      <div className="pt-32 pb-20 bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-left">
+      <div className="pt-24 md:pt-32 pb-16 md:pb-20 bg-gradient-to-r from-amber-50 via-orange-50 to-yellow-50 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6 text-center md:text-left">
             <div className="max-w-2xl">
-              <h1 className="text-5xl md:text-6xl font-extrabold text-amber-800 mb-6">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-amber-800 mb-4 md:mb-6">
                 Coffee Knowledge
               </h1>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 Dive deep into our comprehensive collection of guides, tutorials, and insights into the world of specialty coffee.
               </p>
             </div>
-            <Link to="/" className="px-8 py-3 bg-amber-600 text-white rounded-xl font-bold hover:bg-amber-700 transition-all duration-300 shadow-lg hover:shadow-amber-600/20 whitespace-nowrap">
-              Back to Home
-            </Link>
+            <div className="flex justify-center md:block">
+              <Link to="/" className="px-8 py-3 bg-amber-600 text-white rounded-xl font-bold hover:bg-amber-700 transition-all duration-300 shadow-lg hover:shadow-amber-600/20 whitespace-nowrap cursor-pointer">
+                Back to Home
+              </Link>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {articles.map((article) => (
-              <div key={article.id} className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-                <div className="relative h-64 overflow-hidden">
+              <div key={article.id} className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer">
+                <div className="relative h-56 md:h-64 overflow-hidden">
                   <img 
                     src={article.image} 
                     alt={article.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 cursor-pointer"
                   />
-                  <div className="absolute top-4 left-4 bg-amber-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                  <div className="absolute top-4 left-4 bg-amber-600 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider cursor-pointer">
                     {article.category}
                   </div>
                 </div>
                 
-                <div className="p-8">
-                  <div className="text-amber-600 text-sm font-medium mb-3">{article.date}</div>
-                  <h3 className="text-2xl font-bold text-zinc-900 mb-4 group-hover:text-amber-700 transition-colors">
+                <div className="p-6 md:p-8">
+                  <div className="text-amber-600 text-sm font-medium mb-2 md:mb-3 cursor-pointer">{article.date}</div>
+                  <h3 className="text-xl md:text-2xl font-bold text-zinc-900 mb-3 md:mb-4 group-hover:text-amber-700 transition-colors cursor-pointer">
                     {article.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed cursor-pointer">
                     {article.description}
                   </p>
                 </div>

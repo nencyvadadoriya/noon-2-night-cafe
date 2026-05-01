@@ -22,30 +22,30 @@ function AboutUs() {
             filled with flavors, laughter, and music, we’re here to make every
             hour memorable.
           </p>
-          <button className="mt-4 px-6 py-3 bg-amber-600 text-white rounded-lg shadow-md hover:bg-amber-700 hover:scale-105 transition duration-300">
+          <button className="mt-4 px-6 py-3 bg-amber-600 text-white rounded-lg shadow-md hover:bg-amber-700 hover:scale-105 transition duration-300 cursor-pointer">
             Explore More
           </button>
         </div>
 
         {/* Right Images */}
-        <div className="md:w-1/2 grid grid-cols-2 gap-4 h-[400px]">
+        <div className="md:w-1/2 grid grid-cols-2 gap-4 h-[300px] md:h-[400px]">
           {/* First Image full height */}
           <img
             src={img1}
             alt="About"
-            className="w-full h-full object-cover rounded-2xl shadow-lg row-span-2 transform hover:scale-105 transition duration-300"
+            className="w-full h-full object-cover rounded-2xl shadow-lg row-span-2 transform hover:scale-105 transition duration-300 cursor-pointer"
           />
           {/* Right side top image */}
           <img
             src={img2}
             alt="About"
-            className="w-full h-[195px] object-cover rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+            className="w-full h-[142px] md:h-[195px] object-cover rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 cursor-pointer"
           />
           {/* Right side bottom image */}
           <img
             src={img3}
             alt="About"
-            className="w-full h-[195px] object-cover rounded-2xl shadow-lg transform hover:scale-105 transition duration-300"
+            className="w-full h-[142px] md:h-[195px] object-cover rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 cursor-pointer"
           />
         </div>
       </div>
