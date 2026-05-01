@@ -49,9 +49,9 @@ function Testimonial() {
     <section id="testimonial" className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-4 tracking-tight">What Our Customers Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-950 mb-4 tracking-tight">What Our Customers Say</h2>
           
-          <p className="text-zinc-500 mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-lg italic px-2">
+          <p className="text-zinc-600 mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-lg italic px-2 font-medium">
             "We take pride in serving our community with the finest coffee and delicious meals. Here's what some of our regulars have to say about their experience."
           </p>
         </div>
@@ -84,23 +84,23 @@ function Testimonial() {
         >
           {testimonials.map((t, i) => (
             <SwiperSlide key={i}>
-              <Card className="h-full border-zinc-100 shadow-sm hover:shadow-md transition-shadow duration-300 bg-white border">
+              <Card className="h-full border-zinc-200 shadow-sm hover:shadow-lg transition-all duration-300 bg-zinc-50/50 border">
                 <div className="flex flex-col items-center text-center p-4">
                   <div className="relative mb-6">
                     <img
                       src={t.img}
                       alt={t.name}
-                      className="w-20 h-20 rounded-full object-cover border-4 border-amber-50 shadow-sm"
+                      className="w-20 h-20 rounded-full object-cover border-4 border-white shadow-md"
                     />
                     <div className="absolute -bottom-2 -right-2 bg-amber-600 text-white p-2 rounded-full shadow-lg">
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 2.5 1 4.5 4 6"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 2.5 1 4.5 4 6"></path></svg>
                     </div>
                   </div>
-                  <p className="text-zinc-600 italic leading-relaxed mb-6 text-base">
+                  <p className="text-zinc-800 italic leading-relaxed mb-6 text-base font-medium">
                     "{t.text}"
                   </p>
                   <div className="mt-auto">
-                    <h4 className="text-lg font-bold text-zinc-900">{t.name}</h4>
+                    <h4 className="text-lg font-bold text-zinc-950">{t.name}</h4>
                     
                   </div>
                   <div className="flex gap-1 mt-4">
