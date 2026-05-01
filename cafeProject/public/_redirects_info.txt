@@ -1,0 +1,23 @@
+/* For Netlify */
+/* Redirect all requests to index.html for React Router */
+/* See: https://docs.netlify.com/routing/redirects/rewrites-proxies/ */
+/* This is a common solution for React/SPA routing issues on Netlify */
+
+/* 
+  If you are using Apache/Shared Hosting, you should use .htaccess instead:
+  
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+  </IfModule>
+*/
+
+/* For Vercel, you would use vercel.json:
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
+*/

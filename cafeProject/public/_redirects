@@ -1,0 +1,6 @@
+/*
+  SPA Redirect Rule:
+  This tells the server to redirect all requests to index.html
+  so that React Router can handle the routing internally.
+*/
+/*  /index.html 200
