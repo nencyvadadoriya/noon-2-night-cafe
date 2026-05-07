@@ -4,7 +4,7 @@ import './CustomCursor.css';
 const CustomCursor: React.FC = () => {
   const dotRef = useRef<HTMLDivElement>(null);
   const outlineRef = useRef<HTMLDivElement>(null);
-  const requestRef = useRef<number>();
+  const requestRef = useRef<number>(undefined);
   
   const mousePos = useRef({ x: 0, y: 0 });
   const dotPos = useRef({ x: 0, y: 0 });
